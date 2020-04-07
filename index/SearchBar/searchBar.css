@@ -1,0 +1,84 @@
+.search-bar {
+    width: 100%;
+    height: 1.067rem;
+    position: absolute;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 0.213rem;
+}
+
+.search-bar .bar-location {
+    margin-right: 0.533rem;
+    border-radius: 0.32rem;
+    background-color: rgba(0, 0, 0, .33);
+
+    width: 2.453rem;
+    height: 0.747rem;
+}
+
+.search-bar .location-icon {
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.533rem;
+    /*vertical-align: 0.213rem;*/
+    vertical-align: 0.267rem;
+    margin-left: 0.16rem;
+    background-image: url("../img/locationIcon.png");
+    background-size: cover;
+}
+
+.search-bar .location-text {
+    position: relative;
+    display: inline-block;
+    font-size: 0.373rem;
+    color: #ffffff;
+    /*vertical-align: 0.32rem;*/
+    vertical-align: 0.373rem;
+    margin-left: -0.08rem;
+    /*margin-right: 0.053rem;*/
+}
+
+.search-bar .location-text::after {
+    content: " ";
+    display: block;
+    width: 0.373rem;
+    height: 0.373rem;
+    background-image: url("../img/arrowIcon.png");
+    background-size: cover;
+    position: absolute;
+    right: -0.4rem;
+    top: -0.027rem;
+}
+
+.search-bar .search-btn {
+    position: relative;
+    width: 4.533rem;
+    height: 0.8rem;
+    background-color: #ffffff;
+    border-radius: 0.533rem;
+}
+
+.search-bar .search-btn::before {
+    content: " ";
+    display: block;
+    width: 0.373rem;
+    height: 0.373rem;
+    background-image: url("../img/searchIcon.png");
+    background-size: cover;
+    position: absolute;
+    top: 0.187rem;
+    left: 0.267rem;
+}
+
+.search-bar .place-holder {
+    color: #a9a9a9;
+    font-size: 0.373rem;
+    height: 100%;
+    line-height: 0.8rem;
+    margin-left: 0.747rem;
+}
+
