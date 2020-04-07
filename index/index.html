@@ -5,14 +5,48 @@
           content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <meta charset="UTF-8">
     <title>美团webApp</title>
+    <script>
+        (function () {
+            var docEl = document.documentElement;
+
+            function setRemunit() {
+                //获取到rem的基准值
+                var docElWidth = docEl.clientWidth || window.innerWidth || docEl.getBoundingClientRect().Width
+                var rem = docElWidth / 10;
+
+                //动态设置html根元素的fontSize
+                docEl.style.fontSize = rem + 'px';
+            }
+
+            setRemunit();
+            //窗口大小变化时触发
+            window.addEventListener('resize', setRemunit)
+            //窗口出现在当前屏幕的时候
+            window.addEventListener('pageshow', function (e) {
+                if (e.persisted) {
+                    setRemunit()
+                }
+            })
+        })();
+    </script>
+    <link rel="stylesheet" href="../lib/reset.css">
+    <link rel="stylesheet" href="./header/header.css">
 </head>
 <body>
+<!--头部开始-->
 <div class="header">
     <div class="search-bar">
         <div class="bar-location">
             <div class="location-icon"></div>
+            <div class="location-text">广州市</div>
         </div>
     </div>
+    <div class="search-btn">
+        <p class="place-holder">薯条</p>
+    </div>
+    <img class="header-img"
+         src="https://app.nihaoshijie.com.cn/upload/bannertemp.e8a6fa63.jpg" alt="bg">
 </div>
+<!--头部结束-->
 </body>
 </html>
