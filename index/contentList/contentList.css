@@ -17,7 +17,13 @@
     width: 0.8rem;
     margin: 0 0.107rem 0.107rem;
 }
-
+.loading{
+    padding-bottom: 0.267rem;
+    padding-top: 0.267rem;
+    text-align: center;
+    font-size: 0.427rem;
+    color: #cccccc;
+}
 .r-item-content {
     display: flex;
     padding: 0.4rem 0;

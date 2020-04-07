@@ -20,18 +20,24 @@
         '</div>' +
         '</div>';
 
+    var page = 0;
+    var isLoding = false;
+
     /*
     *   获取商家列表数据渲染
     *   param
     * */
     function getList() {
+        page++;
+        isLoding = true;
         //获取商家的数据
         //json格式
         $.get('../json/homelist.json', function (data) {
-            console.log(data)
-            var list = data.data.poilist || []
+            console.log(data);
+            var list = data.data.poilist || [];
 
             inintContentList(list);
+            isLoding = false;
         })
     }
 
@@ -53,7 +59,7 @@
     * param {} data
     * */
     function getMontNum(data) {
-        var num = data.month_sale_num
+        var num = data.month_sale_num;
 
         if (num > 999) {
             return '999+'
@@ -66,21 +72,21 @@
    * param {} data
    * */
     function getOther(data) {
-        var array = data.discounts2
+        var array = data.discounts2;
 
-        var str = ''
-        array.forEach(function (item,index) {
+        var str = '';
+        array.forEach(function (item, index) {
             //内部商家活动模板字符串
-            var _str = '<div class="other-info">'+
-                            '<img src="$icon_url" class="other-tag"/>'+
-                            '<p class="other-content one-line">$info</p>'+
-                        '</div>'
+            var _str = '<div class="other-info">' +
+                '<img src="$icon_url" class="other-tag"/>' +
+                '<p class="other-content one-line">$info</p>' +
+                '</div>';
             //内部替换
-            _str = _str.replace('$icon_url',item.icon_url)
-                        .replace('$info',item.info)
+            _str = _str.replace('$icon_url', item.icon_url)
+                .replace('$info', item.info);
             //字符串拼接
             str += _str
-        })
+        });
         return str
     }
 
@@ -101,15 +107,35 @@
                 .replace('$brand', getBrand(item))
                 .replace('$montNum', getMontNum(item))
                 .replace('$others', getOther(item))
-                .replace('$wm_poi_score', new StarScore(item.wm_poi_score).getStars())
+                .replace('$wm_poi_score', new StarScore(item.wm_poi_score).getStars());
 
             $('.list-wrap').append($(str))
         })
 
     }
 
+    function addEvent() {
+        window.addEventListener('scroll', function () {
+            var clientHeight = document.documentElement.clientHeight;
+            var scrollHeight = document.body.scrollHeight;
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+
+            var proDis = 30;
+            if ((scrollHeight + scrollTop) >= (clientHeight - proDis)) {
+                if (page < 3) {
+                    if (isLoding) {
+                        return
+                    }
+                    getList()
+                }
+
+            }
+        })
+    }
+
     function init() {
-        getList()
+        getList();
+        addEvent()
     }
 
     init();
