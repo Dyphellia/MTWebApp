@@ -1,9 +1,14 @@
 (function () {
+    //分类模板字符串
     var itemTmpl = '<div class="category-item">' +
         '<img class="item-icon" src="$url">' +
         '<p class="item-name">$name</p>' +
         '</div>';
 
+    /*
+    *   渲染category元素
+    *   param
+    * */
     function initCategory() {
         //获取category的数据
         //json格式
@@ -20,8 +25,21 @@
         })
     }
 
+    /*
+    *   绑定item的click事件
+    *   param
+    * */
+
+    //使用事件委托
+    function addClick(e) {
+        $('.category-content').on('click', '.category-item', function () {
+
+        })
+    }
+
     function init() {
         initCategory()
+        addClick()
     }
 
     init();
