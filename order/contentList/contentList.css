@@ -1,0 +1,110 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.order-item {
+    border-top: 0.347rem solid #efefef;
+}
+
+.order-item .order-item-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 0.48rem;
+    border-bottom: 0.027rem solid #e0e0e0;
+}
+
+.order-item .item-img {
+    width: 1.067rem;
+    height: 1.067rem;
+    margin-top: 0.213rem;
+    margin-left: 0.427rem;
+    display: block;
+    border-radius: 50%;
+}
+
+.order-item .item-right {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-left: 0.4rem;
+    font-size: 0.373rem;
+}
+
+.order-item .item-top {
+    height: 1.467rem;
+    padding-top: 0.053rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-bottom: 0.027rem solid #e0e0e0;
+}
+
+.order-item .item-name {
+    font-size: 0.427rem;
+    width: 4.8rem;
+    height: 0.427rem;
+    font-weight: 600;
+}
+
+.order-item .arrow {
+    width: 0.213rem;
+    height: 0.213rem;
+    border: 0.027rem solid #999999;
+    border-width: 0.027rem 0.027rem 0 0;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+
+}
+
+.order-item .order-state {
+    font-size: 0.373rem;
+    margin-left: 1.067rem;
+    color: #999;
+}
+
+.order-item .product-item {
+    font-size: 0.373rem;
+    color: #666666;
+    margin-top: 0.32rem;
+}
+
+.order-item .p-total-count {
+    float: right;
+    margin-right: 0.4rem;
+    font-size: 0.32rem;
+
+}
+
+.order-item .total-price {
+    font-size: 0.373rem;
+    color: #151515;
+    margin-left: 0.053rem;
+    font-weight: 700;
+    letter-spacing: 0.027rem;
+}
+
+.order-item .p-count {
+    float: right;
+    margin-right: 0.4rem;
+}
+
+.order-item .evaluation {
+    padding-top: 0.267rem;
+    padding-bottom: 0.267rem;
+}
+
+.order-item .evaluation-btn {
+    float: right;
+    width: 2.667rem;
+    height: 0.853rem;
+    color: #6b450a;
+    background-color: #ffd161;
+    font-size: 0.373rem;
+    line-height: 0.853rem;
+    text-align: center;
+    margin-right: 0.32rem;
+}
