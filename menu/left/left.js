@@ -1,0 +1,68 @@
+(function () {
+
+    //左侧类目模板
+    var itemTmpl = '<div class="left-item">' +
+        '<div class="item-text">$getItemContent</div>' +
+        '</div>'
+
+    /*
+    * 请求获取数据
+    * param
+    * */
+    function getList() {
+        $.get('../json/food.json', function (data) {
+            console.log(data);
+            var list = data.data.food_spu_tags || []
+            initContentList(list)
+        })
+    }
+
+    /*
+   * 渲染item内容
+   * param obj
+   * */
+    function getItemContent(data) {
+        if (data.icon) {
+            return '<img class="item-icon" src=' + data.icon + ' />' + data.name
+        } else {
+            return data.name
+        }
+    }
+
+    /*
+ * 渲染列表
+ * param array
+ * */
+    function initContentList(list) {
+        list.forEach(function (item, index) {
+            var str = itemTmpl.replace('$getItemContent', getItemContent(item));
+
+            //将item数组挂载到left-item上
+            var $target = $(str)
+            $target.data('itemData', item)
+            $('.left-bar-inner').append($target)
+        })
+    }
+
+    function addClick() {
+        $('.menu-inner').on('click', '.left-item', function (e) {
+            var $target = $(e.currentTarget)
+            $target.data('itemData')
+
+            $target.addClass('active')
+            $target.siblings().removeClass('active')
+
+
+            //将数组传给详情列表渲染
+            window.Right.refresh($target.data('itemData'))
+        })
+    }
+
+    //方法入口
+    function init() {
+        getList()
+        addClick()
+    }
+
+    init()
+})();
