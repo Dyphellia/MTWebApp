@@ -1,6 +1,6 @@
 (function () {
 
-    var itemTmpl = '<a class="$key btn-item" href="#">' +
+    var itemTmpl = '<a class="$key btn-item" href="../$key/$key.html">' +
         '<div class="tab-icon"></div>' +
         '<div class="btn-name">$text</div>' +
         '</a>'
@@ -21,7 +21,7 @@
 
         var str = ''
         items.forEach(function (item, index) {
-            str += itemTmpl.replace('$key', item.key)
+            str += itemTmpl.replace(/\$key/g, item.key)
                 .replace('$text', item.text)
         })
         $('.bottom-bar').append($(str))

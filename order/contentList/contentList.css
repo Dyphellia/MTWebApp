@@ -108,3 +108,15 @@
     text-align: center;
     margin-right: 0.32rem;
 }
+
+.loading {
+    padding-bottom: 0.267rem;
+    padding-top: 0.267rem;
+    text-align: center;
+    font-size: 0.427rem;
+    color: #cccccc;
+}
+
+.wrap {
+    padding-bottom: 1.333rem;
+}

@@ -65,6 +65,9 @@
         return str
     }
 
+    var page = 0;
+    var isLoding = false
+
     /*
     *   渲染具体商品
     *   @param Array[]
@@ -95,16 +98,40 @@
      *  @param
      */
     function getList() {
+        page++;
+        isLoding = true
         $.get('../json/orders.json', function (data) {
             console.log(data)
             var list = data.data.digestlist || [];
 
             initContentList(list)
+            isLoding = false
+        })
+    }
+
+    //  滚动加载
+    function addEvent() {
+        window.addEventListener('scroll', function () {
+            var clientHeight = document.documentElement.clientHeight,
+                scrollHeight = document.body.scrollHeight,
+                scrollTop = document.body.scrollTop || document.documentElement.scrollTop
+            var preDis = 30;
+            if ((scrollTop + clientHeight) >= (scrollHeight - preDis)) {
+                if (page < 3) {
+                    if (isLoding) {
+                        return
+                    }
+                    getList()
+                }
+            } else {
+                $('.loading').text('加载完成')
+            }
         })
     }
 
     function init() {
         getList()
+        addEvent()
     }
 
     init()
