@@ -1,11 +1,22 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .search-bar {
     width: 100%;
     height: 1.067rem;
     position: absolute;
 
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     padding-top: 0.213rem;
@@ -81,4 +92,3 @@
     line-height: 0.8rem;
     margin-left: 0.747rem;
 }
-
