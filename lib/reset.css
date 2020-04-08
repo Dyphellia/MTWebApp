@@ -86,3 +86,6 @@ table {
 * {
 	-webkit-tap-highlight-color:transparent;
 }
+a{
+	text-decoration: none;
+}
