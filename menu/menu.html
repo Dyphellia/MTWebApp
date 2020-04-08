@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+    <meta charset="UTF-8">
+    <title>点餐菜单</title>
+    <script>
+        (function () {
+            var docEl = document.documentElement;
+
+            function setRemunit() {
+                //获取到rem的基准值
+                var docElWidth = docEl.clientWidth || window.innerWidth || docEl.getBoundingClientRect().Width
+                var rem = docElWidth / 10;
+
+                //动态设置html根元素的fontSize
+                docEl.style.fontSize = rem + 'px';
+            }
+
+            setRemunit();
+            //窗口大小变化时触发
+            window.addEventListener('resize', setRemunit)
+            //窗口出现在当前屏幕的时候
+            window.addEventListener('pageshow', function (e) {
+                if (e.persisted) {
+                    setRemunit()
+                }
+            })
+        })();
+    </script>
+    <link rel="stylesheet" href="../lib/reset.css">
+    <link rel="stylesheet" href="../common/navHeader/navHeader.css">
+    <link rel="stylesheet" href="../common/headerTab/headerTab.css">
+</head>
+<body>
+<!--头部区域开始-->
+<div class="nav">
+    <div class="back-icon"></div>
+    <h4 class="title">广州麦当劳白云山餐厅</h4>
+</div>
+<!--头部区域结束-->
+<!--tab bar开始-->
+<div class="tab-bar"></div>
+<!--tab bar结束-->
+
+<script src="../lib/jquery-3.4.1.min.js"></script>
+<script src="../common/headerTab/headerTab.js"></script>
+</body>
+</html>
