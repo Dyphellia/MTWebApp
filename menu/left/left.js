@@ -12,8 +12,9 @@
     function getList() {
         $.get('../json/food.json', function (data) {
             console.log(data);
-            var list = data.data.food_spu_tags || []
-            initContentList(list)
+            window.food_spu_tags = data.data.food_spu_tags || []
+            initContentList( window.food_spu_tags)
+            window.shopBar.changeShippingPrice(data.data.poi_info.shipping_fee || 0)
         })
     }
 
@@ -42,6 +43,7 @@
             $target.data('itemData', item)
             $('.left-bar-inner').append($target)
         })
+        $('.left-item').first().click()
     }
 
     function addClick() {

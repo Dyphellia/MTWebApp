@@ -1,0 +1,188 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+
+/*购物车底部样式开始 start*/
+.shop-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.shop-bar .bottom-content {
+    height: 1.333rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: rgba(51, 51, 51, .9);
+}
+
+.shop-bar .shop-icon {
+    width: 1.467rem;
+    height: 1.467rem;
+    background-image: url("./img/shop-icon.png");
+    background-size: cover;
+    position: relative;
+    margin-top: -0.4rem;
+    margin-left: 0.32rem;
+}
+
+.shop-bar .dot-num {
+    position: absolute;
+    right: 0;
+    top: 0.053rem;
+    background-color: #fb4e44;
+    width: 0.4rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.32rem;
+    color: #ffffff;
+    border-radius: 50%;
+    border: 0.027rem solid #ffffff;
+    text-align: center;
+
+}
+
+.shop-bar .price-content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding-top: 0.213rem;
+    padding-left: 0.187rem;
+}
+
+.shop-bar .total-price {
+    font-size: 0.533rem;
+    color: #ffffff;
+}
+
+.total-price-span {
+}
+
+.shop-bar .other-price {
+    font-size: 0.32rem;
+    color: #999999;
+    margin-top: 0.053rem;
+}
+
+.shipping-fee {
+}
+
+.shop-bar .submit-btn {
+    width: 2.933rem;
+    height: 100%;
+    background-color: #ffd161;
+    color: #333333;
+    font-size: 0.427rem;
+    line-height: 1.333rem;
+    text-align: center;
+}
+
+/*购物车底部样式结束 end*/
+
+/*购物车顶部样式开始 start*/
+.choose-content {
+    background-color: #ffffff;
+}
+
+.choose-content .content-top {
+    height: 0.933rem;
+    background-color: #f4f4f4;
+    font-size: 0.293rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.choose-content .clear-car {
+    margin-left: 0.267rem;
+    margin-right: 0.133rem;
+    /*float: left;*/
+    position: relative;
+}
+
+.choose-content .clear-car:after {
+    content: "";
+    display: block;
+    width: 0.347rem;
+    height: 0.347rem;
+    background-image: url("./img/clear.jpeg");
+    background-size: cover;
+    position: absolute;
+    top: -0.027rem;
+    left: -0.4rem;
+}
+
+.choose-content .choose-item {
+    display: flex;
+    font-size: 0.4rem;
+    color: #2f2f2f;
+    height: 0.933rem;
+    text-align: center;
+    line-height: 0.933rem;
+    padding-top: 0.267rem;
+    padding-bottom: 0.267rem;
+    border-bottom: 0.027rem solid #dddddd;
+}
+
+.choose-content .choose-item .price {
+    margin-left: 0.133rem;
+    margin-right: 0.667rem;
+}
+
+.choose-content .choose-item .item-name {
+    flex: 1;
+    padding-left: 0.267rem;
+}
+
+.choose-content .select-content {
+    position: relative;
+    margin-right: 0.213rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choose-content .plus {
+    width: 0.667rem;
+    height: 0.667rem;
+    background-image: url("./img/plus.png");
+    background-size: cover;
+}
+
+.choose-content .minus {
+    width: 0.667rem;
+    height: 0.667rem;
+    background-image: url("./img/minus.png");
+    background-size: cover;
+}
+
+.choose-content .count {
+    font-size: 0.4rem;
+    color: #2f2f2f;
+    width: 0.667rem;
+    height: 0.667rem;
+    line-height: 0.667rem;
+    margin-left: 0.053rem;
+    margin-right: 0.053rem;
+    text-align: center;
+}
+
+/*购物车顶部样式结束 end*/
+
+/*遮罩样式*/
+.mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0,.5);
+}
