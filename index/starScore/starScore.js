@@ -15,15 +15,15 @@
 
         var starstr = ''
         for (var i = 0; i < fullstar; i++) {
-            starstr+='<div class="star fullstar"></div>'
+            starstr += '<div class="star fullstar"></div>'
         }
         for (var j = 0; i < halfstar; j++) {
-            starstr+='<div class="star halfstar"></div>'
+            starstr += '<div class="star halfstar"></div>'
         }
         for (var k = 0; i < nullstar; k++) {
-            starstr+='<div class="star nullstar"></div>'
+            starstr += '<div class="star nullstar"></div>'
         }
-        return itemTel.replace('$startstr',starstr)
+        return itemTel.replace('$startstr', starstr)
     }
 
     window.StarScore = function (score) {

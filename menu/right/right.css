@@ -1,4 +1,8 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .right-content {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     margin-left: 0.267rem;
     height: 100%;
@@ -25,6 +29,8 @@
 }
 
 .menu-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-top: 0.667rem;
     padding-bottom: 0.667rem;
@@ -39,6 +45,8 @@
 }
 
 .right-content .menu-item-right {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
@@ -75,6 +83,8 @@
     position: absolute;
     right: 0.24rem;
     bottom: 0.56rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 

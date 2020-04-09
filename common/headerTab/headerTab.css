@@ -1,11 +1,17 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .tab-bar {
     font-size: 0.427rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     border-bottom: 0.027rem solid #f0f0f0;
     margin-top: 1.707rem;
 }
 
 .tab-bar .tab-item {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     height: 1.2rem;
     line-height: 1.2rem;
@@ -23,5 +29,7 @@
     bottom: 0;
     background-color: #ffd161;
     left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }

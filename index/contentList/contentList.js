@@ -127,7 +127,7 @@
                         return
                     }
                     getList()
-                }else {
+                } else {
                     $('.loading').text('加载完成')
                 }
 

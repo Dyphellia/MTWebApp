@@ -1,5 +1,7 @@
 /* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
 
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 
 /*购物车底部样式开始 start*/
 .shop-bar {
@@ -121,6 +123,8 @@
 }
 
 .choose-content .choose-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 0.4rem;
     color: #2f2f2f;
@@ -138,6 +142,8 @@
 }
 
 .choose-content .choose-item .item-name {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
     padding-left: 0.267rem;
 }
@@ -145,8 +151,14 @@
 .choose-content .select-content {
     position: relative;
     margin-right: 0.213rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -184,5 +196,5 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0,.5);
+    background-color: rgba(0, 0, 0, .5);
 }

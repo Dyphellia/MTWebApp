@@ -1,15 +1,20 @@
-.star-score .star{
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+.star-score .star {
     width: 0.267rem;
     height: 0.267rem;
     float: left;
     background-size: cover;
 }
-.star-score .fullstar{
+
+.star-score .fullstar {
     background-image: url("./img/fullstar.png");
 }
-.star-score .halfstar{
+
+.star-score .halfstar {
     background-image: url("./img/halfstar.png");
 }
-.star-score .nullstar{
+
+.star-score .nullstar {
     background-image: url("./img/gray-star.png");
 }

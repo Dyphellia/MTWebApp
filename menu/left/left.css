@@ -1,9 +1,13 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .menu-inner {
     position: absolute;
     right: 0;
     bottom: 0;
     left: 0;
     top: 2.933rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow: hidden;
 }
@@ -25,8 +29,12 @@
     color: #656565;
     text-align: center;
     border-bottom: 0.027rem solid #bfbfbf;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     height: 60px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -36,6 +44,8 @@
 
 .menu-inner .item-text {
     text-align: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
     align-self: center;
 }
 

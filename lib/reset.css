@@ -1,3 +1,5 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -69,13 +71,16 @@ table {
     bottom: 0;
     left: 0;
     -webkit-transform: scaleY(0.5);
+    -ms-transform: scaleY(0.5);
     transform: scaleY(0.5);
     -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
     transform-origin: 0 0;
 }
 
 .one-line {
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -84,6 +89,7 @@ table {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;
 }

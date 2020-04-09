@@ -27,11 +27,11 @@
         $('.bottom-bar').append($(str))
 
         //获取当前页面的url来获取key值
-        var arr= window.location.pathname.split('/')
-        var page = arr[arr.length-1].replace('.html','')
+        var arr = window.location.pathname.split('/')
+        var page = arr[arr.length - 1].replace('.html', '')
 
         //将当前的页面对应的key值的a元素添加active的类
-        $('a.'+page).addClass('active')
+        $('a.' + page).addClass('active')
     }
 
     init()
